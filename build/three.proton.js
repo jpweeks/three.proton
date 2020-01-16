@@ -9,14 +9,13 @@
  */
 (function (root, factory) {
     if (typeof define === 'function' && define.amd) {
-        define([], factory);
+        define(['three'], factory);
     } else if (typeof exports === 'object') {
-        module.exports = factory();
+        module.exports = factory(require('three'));
     } else {
-        root.Proton = factory();
+        root.Proton = factory(root.THREE);
     }
-}(this, function () {
-
+}(this, function (THREE) {
 
     //the max particle number in pool
     Proton.POOL_MAX = 500;
