@@ -2,20 +2,19 @@
  * three.proton v0.1.5
  * https://github.com/a-jie/three.proton
  *
- * Copyright 2011-2019, A-JIE
+ * Copyright 2011-2020, A-JIE
  * Licensed under the MIT license
  * http://www.opensource.org/licenses/mit-license
  *
  */
 (function (root, factory) {
-    if (typeof define === 'function' && define.amd) {
-        define(['three'], factory);
-    } else if (typeof exports === 'object') {
-        module.exports = factory(require('three'));
+    if (typeof exports === 'object') {
+        module.exports = factory(this.THREE);
     } else {
         root.Proton = factory(root.THREE);
     }
 }(this, function (THREE) {
+
 
     //the max particle number in pool
     Proton.POOL_MAX = 500;
