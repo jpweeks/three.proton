@@ -9,7 +9,7 @@
  */
 (function (root, factory) {
     if (typeof exports === 'object') {
-        module.exports = factory(this.THREE);
+        module.exports = factory(window.THREE);
     } else {
         root.Proton = factory(root.THREE);
     }
